@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- connection properties -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/portal</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">hummer10</property>
+
+		<!-- hibernate properties -->
+		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="format_sql">true</property>
+
+		<!-- Dialect cfg -->
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+		<!-- mapping file -->
+		<mapping class="com.ehrc.db.UserDb" />
+		<mapping class="com.ehrc.db.UserSessionDb" />
+		<mapping class="com.ehrc.db.ConsentDb" />
+		<mapping class="com.ehrc.db.HospitalDb" />
+		
+	</session-factory>
+</hibernate-configuration>
